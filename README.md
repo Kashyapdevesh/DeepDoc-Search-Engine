@@ -1,16 +1,8 @@
-﻿![](Aspose.Words.3b3d9116-b087-45d1-93fd-89c4a6325afe.001.jpeg)
-# **Smart PDF Search & ![ref1]**
-# **Management Tool** 
-# **Hackathon Proposal**
-29\.01.2025 
+# **DeepDoc Search Engine**
 
-Proposed By- 
+![image](https://github.com/user-attachments/assets/df316409-02af-432f-ac87-f61efc1a10b2)
 
-Devesh Kashyap
-
-`  `16 ![ref1]
 # <a name="_page1_x72.00_y88.50"></a>**Table of Contents** 
-[Table of Contents](#_page1_x72.00_y88.50) 
 
 [Introduction](#_page1_x72.00_y462.75) 
 
@@ -40,7 +32,6 @@ Devesh Kashyap
 
 [Future Scope and Enhancements](#_page15_x72.00_y217.50) 
 
-[Declaration of Originality](#_page16_x72.00_y88.50) 
 # <a name="_page1_x72.00_y462.75"></a>**Introduction** 
 In today’s business environment, PDFs are widely used for sharing contracts, reports, and critical documents. However, the growing volume and complexity of these files make it challenging to efficiently extract, search, and analyze their content. This is especially problematic in industries like law, finance, and healthcare, where professionals frequently sift through large document volumes to find relevant information. According to Gartner, professionals spend up to 30% of their workweek searching for information, much of which is wasted on poorly organized or hard-to-query document systems. 
 
@@ -75,7 +66,7 @@ The platform supports **automated data ingestion** from multiple cloud and stora
 
 For this prototype, we focus on the **Google Cloud Storage (GCS) ingestion module**. The GCSConnectors.py file in the attached codebase provides the implementation details. 
 
-![](Aspose.Words.3b3d9116-b087-45d1-93fd-89c4a6325afe.003.jpeg)
+![image](https://github.com/user-attachments/assets/e969593f-a66b-4412-9910-f547b078fcb0)
 
 <a name="_page4_x72.00_y703.50"></a>**Workflow for Data Download and Extraction Module** 
 
@@ -132,7 +123,7 @@ Additionally, the module will create an **async event loop**, sending the chunk 
 
 For implementation details, refer to the ESDocStoreConsumer.py file in the attached codebase. 
 
-![](Aspose.Words.3b3d9116-b087-45d1-93fd-89c4a6325afe.004.jpeg)
+![image](https://github.com/user-attachments/assets/4d3424b3-bf57-4723-bc1d-84f35a48dd3d)
 
 <a name="_page7_x72.00_y706.50"></a>**Workflow for DocStore Data Storage Module** 
 
@@ -180,7 +171,7 @@ The generated summaries are **stored with their associated UUIDs** in Chroma, li
 
 For implementation details, refer to ProcessStreamChunk.py 
 
-![](Aspose.Words.3b3d9116-b087-45d1-93fd-89c4a6325afe.005.jpeg)
+![image](https://github.com/user-attachments/assets/ad854a85-da63-4fa0-a497-6ed4bc5fb779)
 
 <a name="_page10_x72.00_y694.50"></a>**Workflow for Chunk Data Summarization and Storage** 
 
@@ -219,7 +210,8 @@ For **LLM-based search**, the system:
 1. **Provides the original artifacts as context** to **DeepSeek R1 LLM**, enabling it to generate **context-aware responses**. 
 1. **Includes metadata** (PDF name and page number from Elasticsearch) to **cite sources** for the generated response. 
 
-   ![](Aspose.Words.3b3d9116-b087-45d1-93fd-89c4a6325afe.006.jpeg)
+![image](https://github.com/user-attachments/assets/590e89b6-230e-4269-bdf9-6792e90cb758)
+
 
 <a name="_page13_x72.00_y690.75"></a>**Workflow for Query Processing & Retrieval Module** 
 
@@ -261,15 +253,4 @@ For **LLM-based search**, the system:
    1. Improve the answer quality by incorporating chat history as context. This will enable more natural, multi-turn conversations and enhance the accuracy and relevance of responses. 
 1. **Advanced Caching & Performance Optimizations**: 
 - Implement Redis caching to store frequent queries and their results, reducing latency and improving system performance for repeated searches. 
-# <a name="_page16_x72.00_y88.50"></a>**Declaration of Originality** 
-I declare herewith, that this above-mentioned work is my own original work. Furthermore, I confirm that: 
 
-- All data and findings in the work have not been falsified or embellished; 
-- This work has not been previously, or concurrently, used either for educational courses or within exam processes as an exam work; 
-- This work has not been published. 
-
-We confirm that we understand that our work may be electronically checked for plagiarism by the use of plagiarism detection software and stored on a third party’s server for eventual future comparison. 
-
-Devesh Kashyap 
-
-[ref1]: Aspose.Words.3b3d9116-b087-45d1-93fd-89c4a6325afe.002.png
